@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="fi">
 <head>
   <meta charset="UTF-8">
   <title>Laskuri</title>
@@ -17,5 +17,15 @@
       Nollaa
     </button>
   </form>
+  <form action="/set" method="POST">
+    <label for="value">Aseta arvo:</label>
+    <input id="value" name="value" type="number" required>
+    <button type="submit">
+      aseta
+    </button>
+  </form>
+  {% if error %}
+    <p>{{ error }}</p>
+  {% endif %}
 </body>
 </html>
